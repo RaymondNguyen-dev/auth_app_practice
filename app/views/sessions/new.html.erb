@@ -1,0 +1,8 @@
+<h1>Login</h1>
+<%= form_with url: "/users/sign_in", local: true do |form| %>
+  <%= form.label :email %>
+  <%= form.email_field :email %><br>
+  <%= form.label :password %>
+  <%= form.password_field :password %><br>
+  <%= form.submit "Login" %>
+<% end %>
