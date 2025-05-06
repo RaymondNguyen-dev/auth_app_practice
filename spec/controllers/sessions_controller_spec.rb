@@ -13,8 +13,6 @@ RSpec.describe 'Authentication', type: :feature do
       expect(page).to have_content('Signed in successfully.')
       expect(current_path).to eq(root_path)
     end
-
-    # Add more tests for invalid credentials, etc.
   end
 
   describe 'User sign out' do
