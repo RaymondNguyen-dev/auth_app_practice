@@ -59,11 +59,28 @@ group :development, :test do
   gem "shoulda-matchers"
 
   gem "rails-controller-testing"
+
+  gem "slim"
+
+  gem "bootstrap", "~> 5.3.0"
+
+  gem "sassc-rails"
+
+  gem "jquery-rails"
+
+  gem "toastr-rails"
+
+  gem "webpacker"
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem "guard-livereload", "~> 2.5", require: false
+  gem "rack-livereload"
+  gem "guard-rails", require: false
+  # If not already present:
+  gem "foreman"
 end
 
 group :test do
@@ -71,4 +88,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "faker"
+  gem "simplecov", require: false
 end

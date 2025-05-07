@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title
+      | SimpleAuthApp
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_include_tag "application", type: "module",
+      "data-turbo-track": "reload", defer: true
+  body
+    header
+      - if current_user
+        p
+          | Logged in as
+        strong
+          = current_user.name
+        |  |
+        = button_to "Logout",
+          destroy_user_session_path,
+          method: :delete,
+          class: "button-link"
+    main
+      = yield

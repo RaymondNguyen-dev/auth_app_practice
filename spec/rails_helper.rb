@@ -1,5 +1,6 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
+require 'simplecov'
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 # Prevent database truncation if the environment is production
@@ -7,22 +8,26 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
-# Cấu hình FactoryBot
+# Configure FactoryBot
 require 'factory_bot_rails'
 
 RSpec.configure do |config|
-  # Cấu hình FactoryBot
+  # Configure FactoryBot
   config.include FactoryBot::Syntax::Methods
   config.include Devise::Test::IntegrationHelpers, type: :feature
 end
 
-# Cấu hình Shoulda Matchers
+# Configure Shoulda Matchers
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec
     with.library :rails
   end
 end
+
+SimpleCov.start 'rails'  # for Rails apps, otherwise use SimpleCov.start
+
+puts "SimpleCov started..."
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are

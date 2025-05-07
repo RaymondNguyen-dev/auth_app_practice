@@ -1,0 +1,41 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/huyph/code/rails/auth_app/app/models/user.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/huyph/code/rails/auth_app/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/huyph/code/rails/auth_app/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/home/huyph/code/rails/auth_app/app/controllers/sessions_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1746527166
+  }
+}
